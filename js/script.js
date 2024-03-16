@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         switch (architecture) {
             case 'x64':
-                downloadLink = '/appzip/TCPchat1.0-x64-setup-2023_12_31_allen1566.zip';
+                downloadLink = '/appzip/SMCL-x64-setup_allen1566.zip';
                 break;
             case 'x86':
-                downloadLink = '/appzip/TCPchat1.0-x86-setup-2023_12_31_allen1566.zip';
+                downloadLink = '/appzip/SMCL-x86-setup_allen1566.zip';
                 break;
             case 'arm64':
-                downloadLink = '/appzip/TCPchat1.0-arm64-setup-2023_12_31_allen1566.zip';
+                downloadLink = '/appzip/SMCL-arm64-setup_allen1566.zip';
                 break;
             default:
                 // 处理其他情况或错误
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // 创建一个隐藏的链接并触发下载
         var link = document.createElement('a');
         link.href = downloadLink;
-        link.download = 'TCPchat.zip'; // 您可以设置下载文件的默认名称
+        link.download = 'SMCL.zip'; // 您可以设置下载文件的默认名称
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
