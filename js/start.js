@@ -25,3 +25,4 @@ function playAudio() {
         audio.pause();
     }
 }
+
