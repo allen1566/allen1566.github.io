@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>关于Hexo文章的随机封面 | Allen1566's Blog</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.ico"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.11.0"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="关于Hexo文章的随机封面1.引入我们的hexo文章一般又有一个封面，我们并不想让文章的封面千篇一律，可是每次都单独去找封面又太麻烦了。 2.随机图片API这时很多人就会想到有个东西叫做 随机图片API。 现在这种API有非常多，可以直接拿来用。 3.使用和设置封面一样，我们只需要把frontMat"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Allen1566's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.ico"><link rel="apple-touch-icon" href="/img/pwa/favicon.ico" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.11.0",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2024-05-12 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.webp'
+    },
+    copyright: {"limit":50,"author":"作者: Allen1566","link":"链接: ","source":"来源: Allen1566's Blog","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '到午饭时间了哦',
+            afternoon: '下午好哇',
+            night: '早点睡哦',
+            goodnight: '睡个好觉吧',
+        },
+        sayhello2: ["🤖️ 摄影爱好者","🎮 Minecraft玩家"],
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude st-side-bar-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E6%A2%97/">梗<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><span class="title">Allen1566's Blog</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">关于Hexo文章的随机封面</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="solitude st-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://cloud.qqshabi.cn/api/images/api.php" alt="关于Hexo文章的随机封面"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">关于Hexo文章的随机封面</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2024-05-19 15:08:19"><i class="post-meta-icon solitude st-calendar-todo-fill"></i><time datetime="2024-05-19T07:08:19.000Z">2024-05-19T07:08:19.000Z</time></span><span class="post-meta-date" title="最后更新于 2024-05-19 15:33:09"><i class="post-meta-icon solitude st-refresh-line"></i><time datetime="2024-05-19T07:33:09.012Z">2024-05-19T07:33:09.012Z</time></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="关于Hexo文章的随机封面"><a href="#关于Hexo文章的随机封面" class="headerlink" title="关于Hexo文章的随机封面"></a>关于Hexo文章的随机封面</h1><h2 id="1-引入"><a href="#1-引入" class="headerlink" title="1.引入"></a>1.引入</h2><p>我们的hexo文章一般又有一个封面，我们并不想让文章的封面千篇一律，可是每次都单独去找封面又太麻烦了。</p>
+<h2 id="2-随机图片API"><a href="#2-随机图片API" class="headerlink" title="2.随机图片API"></a>2.随机图片API</h2><p>这时很多人就会想到有个东西叫做 随机图片API。</p>
+<p>现在这种API有非常多，可以直接拿来用。</p>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p>和设置封面一样，我们只需要把frontMatter的[封面]key的值设为[你的API]就行了。</p>
+<p>一些API：</p>
+<p><a target="_blank" rel="noopener" href="https://imgapi.xl0408.top/index.php">https://imgapi.xl0408.top/index.php</a><br><a target="_blank" rel="noopener" href="https://t.lcylcy.cc/fj/">https://t.lcylcy.cc/fj/</a><br><a target="_blank" rel="noopener" href="https://t.lcylcy.cc/pc/">https://t.lcylcy.cc/pc/</a><br><a target="_blank" rel="noopener" href="https://cloud.qqshabi.cn/api/images/api.php">https://cloud.qqshabi.cn/api/images/api.php</a><br><a target="_blank" rel="noopener" href="https://www.dmoe.cc/random.php">https://www.dmoe.cc/random.php</a><br><a target="_blank" rel="noopener" href="https://img.paulzzh.com/touhou/random">https://img.paulzzh.com/touhou/random</a><br><a target="_blank" rel="noopener" href="https://api.horosama.com/random.php">https://api.horosama.com/random.php</a></p>
+<p>例如：<br>我使用的主题是“solitude”<br>我只要把“cover”设为“<a target="_blank" rel="noopener" href="https://cloud.qqshabi.cn/api/images/api.php%E2%80%9D%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86">https://cloud.qqshabi.cn/api/images/api.php”就可以了</a></p>
+<h2 id="4-API展示"><a href="#4-API展示" class="headerlink" title="4.API展示"></a>4.API展示</h2><p><a target="_blank" rel="noopener" href="https://imgapi.xl0408.top/index.php">https://imgapi.xl0408.top/index.php</a><br><img src="https://imgapi.xl0408.top/index.php" alt="API1" /></p>
+<p><a target="_blank" rel="noopener" href="https://t.lcylcy.cc/fj/">https://t.lcylcy.cc/fj/</a><br><img src="https://t.lcylcy.cc/fj/" alt="API2" /></p>
+<p><a target="_blank" rel="noopener" href="https://t.lcylcy.cc/pc/">https://t.lcylcy.cc/pc/</a><br><img src="https://t.lcylcy.cc/pc/" alt="API3" /></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.qqshabi.cn/api/images/api.php">https://cloud.qqshabi.cn/api/images/api.php</a><br><img src="https://cloud.qqshabi.cn/api/images/api.php" alt="API4" /></p>
+<p><a target="_blank" rel="noopener" href="https://www.dmoe.cc/random.php">https://www.dmoe.cc/random.php</a><br><img src="https://www.dmoe.cc/random.php" alt="API5" /></p>
+<p><a target="_blank" rel="noopener" href="https://api.horosama.com/random.php">https://api.horosama.com/random.php</a><br><img src="https://api.horosama.com/random.php" alt="API6" /></p>
+<p><a target="_blank" rel="noopener" href="https://img.paulzzh.com/touhou/random">https://img.paulzzh.com/touhou/random</a><br><img src="https://img.paulzzh.com/touhou/random" alt="API7" /></p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="/img/pwa/favicon.ico"></a><div class="post-copyright__author_name">Allen1566's Blog</div><div class="post-copyright__author_desc">Nothing...</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Allen1566's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F19%2F%25E5%2585%25B3%25E4%25BA%258EHexo%25E6%2596%2587%25E7%25AB%25A0%25E7%259A%2584%25E9%259A%258F%25E6%259C%25BA%25E5%25B0%2581%25E9%259D%25A2%2F&amp;title=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2&amp;desc=undefined&amp;summary=undefined&amp;site=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2&amp;pics=https%3A%2F%2Fcloud.qqshabi.cn%2Fapi%2Fimages%2Fapi.php" title="QQ"></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F19%2F%25E5%2585%25B3%25E4%25BA%258EHexo%25E6%2596%2587%25E7%25AB%25A0%25E7%259A%2584%25E9%259A%258F%25E6%259C%25BA%25E5%25B0%2581%25E9%259D%25A2%2F&amp;title=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2&amp;pic=https%3A%2F%2Fcloud.qqshabi.cn%2Fapi%2Fimages%2Fapi.php" title="Weibo"></a><a class="social-share-ico icon-twitter" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F19%2F%25E5%2585%25B3%25E4%25BA%258EHexo%25E6%2596%2587%25E7%25AB%25A0%25E7%259A%2584%25E9%259A%258F%25E6%259C%25BA%25E5%25B0%2581%25E9%259D%25A2%2F&amp;text=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2" title="Twitter"></a><a class="social-share-ico icon-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F19%2F%25E5%2585%25B3%25E4%25BA%258EHexo%25E6%2596%2587%25E7%25AB%25A0%25E7%259A%2584%25E9%259A%258F%25E6%259C%25BA%25E5%25B0%2581%25E9%259D%25A2%2F" title="Facebook"></a><a class="social-share-ico icon-telegram" target="_blank" rel="noopener" href="https://t.me/share/url?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F19%2F%25E5%2585%25B3%25E4%25BA%258EHexo%25E6%2596%2587%25E7%25AB%25A0%25E7%259A%2584%25E9%259A%258F%25E6%259C%25BA%25E5%25B0%2581%25E9%259D%25A2%2F&amp;text=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2" title="Telegram"></a><a class="social-share-ico icon-whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2 https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F19%2F%25E5%2585%25B3%25E4%25BA%258EHexo%25E6%2596%2587%25E7%25AB%25A0%25E7%259A%2584%25E9%259A%258F%25E6%259C%25BA%25E5%25B0%2581%25E9%259D%25A2%2F" title="WhatsApp"></a><a class="social-share-ico icon-linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F19%2F%25E5%2585%25B3%25E4%25BA%258EHexo%25E6%2596%2587%25E7%25AB%25A0%25E7%259A%2584%25E9%259A%258F%25E6%259C%25BA%25E5%25B0%2581%25E9%259D%25A2%2F&amp;title=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2&amp;summary=undefined&amp;source=%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2" title="LinkedIn"></a></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/05/19/%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">一步两步，一步两步~</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="/img/avatar.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">在这个<b>世界</b>上，也有即使你<b>不懂索取</b>，</br>也会无条件向你献上爱情的——<b>多管闲事</b>的人。</div><div class="author-info__description2">仅仅是能与这样的人相遇，我们也算是很<b>幸福</b>的人了。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">Allen1566</div><div class="author-info__desc">Nothing...</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/allen1566" title="Github"><i class="solitude  st-github-line"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2"><span class="toc-text">关于Hexo文章的随机封面</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BC%95%E5%85%A5"><span class="toc-text">1.引入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87API"><span class="toc-text">2.随机图片API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8"><span class="toc-text">3.使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-API%E5%B1%95%E7%A4%BA"><span class="toc-text">4.API展示</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/19/%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5/" title="一步两步，一步两步~"><img alt="一步两步，一步两步~" src="https://imgapi.xl0408.top/index.php"></a><div class="content"><a class="title" href="/2024/05/19/%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5/" title="一步两步，一步两步~">一步两步，一步两步~</a><a class="article-recent_post_categories" href="/2024/05/19/%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5/">班级梗百科</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/19/%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2/" title="关于Hexo文章的随机封面"><img alt="关于Hexo文章的随机封面" src="https://cloud.qqshabi.cn/api/images/api.php"></a><div class="content"><a class="title" href="/2024/05/19/%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2/" title="关于Hexo文章的随机封面">关于Hexo文章的随机封面</a></div></div></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Allen1566's Blog</span></div><div class="footer-bar-description">来自 Allen1566 的文章</div><a class="footer-bar-link" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328">了解更多</a></div><div id="footer_deal"><a class="deal_link" href="mailto:allen.1566@yandex.ru" title="Mail"><i class="solitude  st-mail-line"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="归档">归档</a><a class="footer-item" href="/categories/" title="分类">分类</a><a class="footer-item" href="/tags/" title="标签">标签</a></div></div><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://aliyun.com/" title="阿里云">阿里云</a><a class="footer-item" target="_blank" rel="noopener" href="https://v6.51.la/" title="51la统计">51la统计</a><a class="footer-item" target="_blank" rel="noopener" href="https://tongji.baidu.com/" title="百度统计">百度统计</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 By&nbsp;<a class="footer-bar-link" href="/">Allen1566</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" alt="B站">B站</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.11.0"></script><script src="/js/main.js?v=1.11.0"></script><script src="/js/third_party/waterfall.min.js?v=1.11.0"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="/js/third_party/universe.min.js?v=1.11.0"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"></div></div><!-- newest comment--><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    is_rm && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- google adsense--><!-- search--><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2024/05/19/一步两步，一步两步/","2024/05/19/关于Hexo文章的随机封面/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>
