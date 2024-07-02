@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>使用WinRAR解压缩压缩文件 | Allen1566's Blog</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.ico"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.11.0"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="0.如果你是一只电脑小白（连解压都不会的那种），假设你需要某些资源，于是去网上下载了，发现是一个压缩包（.zip,.rar,.7z等等），可又不会解压缩，你可以选择看看这一篇文档（应该也能这么叫吧）。 1.认识压缩文件（抄的百度百科）压缩文件，即经过压缩软件压缩的文件。 简单的说，就是经过压缩软件压"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Allen1566's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.ico"><link rel="apple-touch-icon" href="/img/pwa/favicon.ico" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.11.0",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2024-05-12 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.webp'
+    },
+    copyright: {"limit":50,"author":"作者: Allen1566","link":"链接: ","source":"来源: Allen1566's Blog","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '到午饭时间了哦',
+            afternoon: '下午好哇',
+            night: '早点睡哦',
+            goodnight: '睡个好觉吧',
+        },
+        sayhello2: ["🤖️ 摄影爱好者","🎮 Minecraft玩家"],
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude st-side-bar-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E4%BF%A1%E6%81%AF%E8%AF%BE/">信息课<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/">教程<sup>1</sup></a><a href="/tags/%E8%A7%A3%E5%8E%8B/">解压<sup>1</sup></a><a href="/tags/Hexo/">Hexo<sup>1</sup></a><a href="/tags/%E6%AF%94%E8%B5%9B/">比赛<sup>1</sup></a><a href="/tags/%E5%9B%BD%E8%B5%9B/">国赛<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/">编程<sup>1</sup></a><a href="/tags/%E7%AD%94%E8%BE%A9/">答辩<sup>1</sup></a><a href="/tags/%E6%A2%97/">梗<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><span class="title">Allen1566's Blog</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">使用WinRAR解压缩压缩文件</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="solitude st-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://imgapi.xl0408.top/index.php" alt="使用WinRAR解压缩压缩文件"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E5%B0%8F%E7%99%BD%E4%B8%93%E5%B1%9E/">小白专属</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BF%A1%E6%81%AF%E8%AF%BE/"><span class="tags-name tags-punctuation">信息课</span></a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-name tags-punctuation">教程</span></a><a class="post-meta__tags" href="/tags/%E8%A7%A3%E5%8E%8B/"><span class="tags-name tags-punctuation">解压</span></a></div></div></div></div><h1 class="post-title">使用WinRAR解压缩压缩文件</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2024-05-26 21:24:29"><i class="post-meta-icon solitude st-calendar-todo-fill"></i><time datetime="2024-05-26T13:24:29.000Z">2024-05-26T13:24:29.000Z</time></span><span class="post-meta-date" title="最后更新于 2024-07-02 10:11:56"><i class="post-meta-icon solitude st-refresh-line"></i><time datetime="2024-07-02T02:11:56.700Z">2024-07-02T02:11:56.700Z</time></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="0"><a href="#0" class="headerlink" title="0."></a>0.</h1><p>如果你是一只电脑小白（连解压都不会的那种），假设你需要某些资源，于是去网上下载了，发现是一个压缩包（.zip,.rar,.7z等等），可又不会解压缩，你可以选择看看这一篇文档（应该也能这么叫吧）。</p>
+<h1 id="1-认识压缩文件（抄的百度百科）"><a href="#1-认识压缩文件（抄的百度百科）" class="headerlink" title="1.认识压缩文件（抄的百度百科）"></a>1.认识压缩文件（抄的百度百科）</h1><p>压缩文件，即经过压缩软件压缩的文件。</p>
+<p>简单的说，就是经过压缩软件压缩的文件叫压缩文件，压缩的原理是把文件的二进制代码压缩，把相邻的0,1代码减少，比如有000000,可以把它变成6个0 的写法60,来减少该文件的空间。</p>
+<p>压缩文件的基本原理是查找文件内的重复字节,并建立一个相同字节的词典文件,并用一个代码表示,比如在文件里有几处有一个相同的词中华人民共和国用一个代码表示并写入词典文件,这样就可以达到缩小文件的目的。</p>
+<p><img src="https://bkimg.cdn.bcebos.com/pic/cefc1e178a82b9010760441c778da9773812efd4?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080" alt="压缩包"></p>
+<h3 id="（附加内容）压缩原理"><a href="#（附加内容）压缩原理" class="headerlink" title="（附加内容）压缩原理"></a>（附加内容）压缩原理</h3><p>把文件的二进制代码压缩，把相邻的0,1代码减少，比如有000000,可以把它变成6个0 的写法60,来减少该文件的空间。</p>
+<p>由于计算机处理的信息是以二进制数的形式表示的，因此压缩软件就是把二进制信息中相同的字符串以特殊字符标记来达到压缩的目的。为了有助于理解文件压缩，请在脑海里想象一幅蓝天白云的图片。对于成千上万单调重复的蓝色像点而言，与其一个一个定义“蓝、蓝、蓝……”长长的一串颜色，还不如告诉电脑：“从这个位置开始存储1117个蓝色像点”来得简洁，而且还能大大节约存储空间。这是一个非常简单的图像压缩的例子。其实，所有的计算机文件归根结底都是以“1”和“0”的形式存储的，和蓝色像点一样，只要通过合理的数学计算公式，文件的体积都能够被大大压缩以达到“数据无损稠密”的效果。总的来说，压缩可以分为有损和无损压缩两种。如果丢失个别的数据不会造成太大的影响，这时忽略它们是个好主意，这就是有损压缩。有损压缩广泛应用于动画、声音和图像文件中，典型的代表就是影碟文件格式mpeg、音乐文件格式mp3和图像文件格式jpg。但是更多情况下压缩数据必须准确无误，人们便设计出了无损压缩格式，比如常见的zip、rar等。压缩软件（compression software）自然就是利用压缩原理压缩数据的工具，压缩后所生成的文件称为压缩包（archive），体积只有原来的几分之一甚至更小。当然，压缩包已经是另一种文件格式了，如果想使用其中的数据，首先得用压缩软件把数据还原，这个过程称作解压缩。常见的压缩软件有winzip、winrar等。</p>
+<p>有两种形式的重复存在于计算机数据中，zip就是对这两种重复进行了压缩。</p>
+<p>一种是短语形式的重复，即三个字节以上的重复，对于这种重复，zip用两个数字：1.重复位置距当前压缩位置的距离；2.重复的长度，来表示这个重复，假设这两个数字各占一个字节，于是数据便得到了压缩，这很容易理解。</p>
+<p>一个字节有 0 - 255 共 256 种可能的取值，三个字节有 256 * 256 * 256 共一千六百多万种可能的情况，更长的短语取值的可能情况以指数方式增长，出现重复的概率似乎极低，实则不然，各种类型的数据都有出现重复的倾向，一篇论文中，为数不多的术语倾向于重复出现；一篇小说，人名和地名会重复出现；一张上下渐变的背景图片，水平方向上的像素会重复出现；程序的源文件中，语法关键字会重复出现（我们写程序时，多少次前后copy、paste？），以几十 K 为单位的非压缩格式的数据中，倾向于大量出现短语式的重复。经过上面提到的方式进行压缩后，短语式重复的倾向被完全破坏，所以在压缩的结果上进行第二次短语式压缩一般是没有效果的。</p>
+<p>第二种重复为单字节的重复，一个字节只有256种可能的取值，所以这种重复是必然的。其中，某些字节出现次数可能较多，另一些则较少，在统计上有分布不均匀的倾向，这是容易理解的，比如一个 ASCII 文本文件中，某些符号可能很少用到，而字母和数字则使用较多，各字母的使用频率也是不一样的，据说字母 e 的使用概率最高；许多图片呈现深色调或浅色调，深色（或浅色）的像素使用较多（这里顺便提一下：png 图片格式是一种无损压缩，其核心算法就是 zip 算法，它和 zip 格式的文件的主要区别在于：作为一种图片格式，它在文件头处存放了图片的大小、使用的颜色数等信息）；上面提到的短语式压缩的结果也有这种倾向：重复倾向于出现在离当前压缩位置较近的地方，重复长度倾向于比较短（20字节以内）。这样，就有了压缩的可能：给 256 种字节取值重新编码，使出现较多的字节使用较短的编码，出现较少的字节使用较长的编码，这样一来，变短的字节相对于变长的字节更多，文件的总长度就会减少，并且，字节使用比例越不均匀，压缩比例就越大。</p>
+<h1 id="2-安装解压缩软件"><a href="#2-安装解压缩软件" class="headerlink" title="2.安装解压缩软件"></a>2.安装解压缩软件</h1><p>（此处以WinRAR为例）</p>
+<p>WinRAR 是一款功能强大的压缩包管理器，它是档案工具RAR在 Windows环境下的图形界面。该软件可用于备份数据，缩减电子邮件附件的大小，解压缩从 Internet 上下载的RAR、ZIP及其它类型文件，并且可以新建 RAR 及 ZIP 格式等的压缩类文件。</p>
+<h2 id="1-访问官网"><a href="#1-访问官网" class="headerlink" title="1.访问官网"></a>1.访问官网</h2><p><a target="_blank" rel="noopener" href="https://www.winrar.com.cn/">WinRAR官网</a></p>
+<p>↑（点击进入）</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/5bef6a1e6d47df84c2e6e.png" alt="WinRAR官网"></p>
+<p>进入官网后，你可以看到有两个醒目的下载按钮，请根据你的操作系统规格*进行下载。</p>
+<h3 id="（附加内容）32位？64位？"><a href="#（附加内容）32位？64位？" class="headerlink" title="（附加内容）32位？64位？"></a>（附加内容）32位？64位？</h3><h4 id="1-快速查看你的操作系统规格"><a href="#1-快速查看你的操作系统规格" class="headerlink" title="1.快速查看你的操作系统规格"></a>1.快速查看你的操作系统规格</h4><p>在 Windows 10 上，右键单击“开始”按钮并选择“系统”。 您还可以浏览到设置 &gt; 系统 &gt; 关于。 在这里，您将看到设备规格标题。</p>
+<p>在系统类型旁边，Windows 会列出您的安装是 32 位还是 64 位，以及您的处理器架构。</p>
+<p>在 Windows 7 及更早版本上，右键单击“开始”菜单中的“计算机”并选择“属性”。 使用 Win + 暂停快捷方式在任何版本的 Windows 上打开此菜单。 您将看到带有您的操作系统和 CPU 架构的系统类型条目。</p>
+<p>两个面板还会在此处列出您安装的内存。在 32 位系统上，如果您安装了超过 4GB 的内存，这将说明 4GB 可用。</p>
+<pre><code>【原文链接：https://blog.csdn.net/winkexin/article/details/131619056】
+</code></pre>
+<h4 id="2-他们是啥？"><a href="#2-他们是啥？" class="headerlink" title="2.他们是啥？"></a>2.他们是啥？</h4><p>可以看看这边博文：<a herf="https://blog.csdn.net/winkexin/article/details/131619056">Windows 32 位和 64 位的区别：你需要知道的一切</a></p>
+<p>继续↓—————————–附加内容↑</p>
+<p>下载完成后，双击下载的文件，打开。</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/480605c192e431ccc7fec.png" alt="安装包"></p>
+<p>在弹出的UAC中点击「是」</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/ec711c6d5fea2c8efbb56.png" alt="第一个窗口"></p>
+<p>你可以选择安装路径，在选好路径以后，仔细阅读EULA协议，然后点击安装。</p>
+<p>接着会弹出一个安装窗口，一闪而过。</p>
+<p>再然后就弹出了一个设定窗口↓</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/3a679258387a0f6754fa6.png" alt="设定窗口"></p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/e33d5edaa81a20bdb5d83.png" alt="完成窗口"></p>
+<p>点击完成</p>
+<h1 id="3-进行压缩"><a href="#3-进行压缩" class="headerlink" title="3.进行压缩"></a>3.进行压缩</h1><p>首先，选中需要压缩的文件，单击鼠标右键。</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/ce7c8bf3c046fb21e0ebb.png" alt="右键"></p>
+<p>(你们的步骤可能不太一样)找的「WinRAR&gt;添加到”{文件名}.rar”」点击它。</p>
+<p>一个进度窗口会一闪而过（存在的时间由要压缩的文件大小决定）</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/359c037f1864621afd85c.png" alt="查看压缩文件"></p>
+<h1 id="4-解压缩"><a href="#4-解压缩" class="headerlink" title="4.解压缩"></a>4.解压缩</h1><h2 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h2><p>双击要接压缩的文件</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/dd369c39ea5962b6ea78e.png" alt="解压1"><br>①选择解压位置（右侧有图形化界面）</p>
+<p>②设定解压设置</p>
+<p>③设定好后点击确定开始解压缩</p>
+<p>来到解压路径就可以看到解压的文件了<br><img src="https://telegraph-image-7ay.pages.dev/file/e525788462af94a8d6164.png" alt="解压1_2"></p>
+<h2 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h2><p>①选中压缩文件，右键点击文件</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/05270d3ac02268d348e17.png" alt="解压2"></p>
+<p>②选择解压位置（右侧有图形化界面）</p>
+<p>③设定解压设置</p>
+<p>④设定好后点击确定开始解压缩</p>
+<p><img src="https://telegraph-image-7ay.pages.dev/file/65ac309e20b2ecf8726e3.png" alt="解压2_2"></p>
+<p>来到解压路径就可以看到解压的文件了<br><img src="https://telegraph-image-7ay.pages.dev/file/e525788462af94a8d6164.png" alt="解压2_3"></p>
+<hr>
+<p>希望能帮到你</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="/img/pwa/favicon.ico"></a><div class="post-copyright__author_name">Allen1566's Blog</div><div class="post-copyright__author_desc">Nothing...</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Allen1566's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BF%A1%E6%81%AF%E8%AF%BE/"><span class="tags-punctuation"></span>信息课<span class="tagsPageCount">1</span></a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"></span>教程<span class="tagsPageCount">1</span></a><a class="post-meta__tags" href="/tags/%E8%A7%A3%E5%8E%8B/"><span class="tags-punctuation"></span>解压<span class="tagsPageCount">1</span></a></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F26%2F%25E4%25BD%25BF%25E7%2594%25A8WinRAR%25E8%25A7%25A3%25E5%258E%258B%25E7%25BC%25A9%25E5%258E%258B%25E7%25BC%25A9%25E6%2596%2587%25E4%25BB%25B6%2F&amp;title=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6&amp;desc=undefined&amp;summary=undefined&amp;site=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6&amp;pics=https%3A%2F%2Fimgapi.xl0408.top%2Findex.php" title="QQ"></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F26%2F%25E4%25BD%25BF%25E7%2594%25A8WinRAR%25E8%25A7%25A3%25E5%258E%258B%25E7%25BC%25A9%25E5%258E%258B%25E7%25BC%25A9%25E6%2596%2587%25E4%25BB%25B6%2F&amp;title=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6&amp;pic=https%3A%2F%2Fimgapi.xl0408.top%2Findex.php" title="Weibo"></a><a class="social-share-ico icon-twitter" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F26%2F%25E4%25BD%25BF%25E7%2594%25A8WinRAR%25E8%25A7%25A3%25E5%258E%258B%25E7%25BC%25A9%25E5%258E%258B%25E7%25BC%25A9%25E6%2596%2587%25E4%25BB%25B6%2F&amp;text=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6" title="Twitter"></a><a class="social-share-ico icon-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F26%2F%25E4%25BD%25BF%25E7%2594%25A8WinRAR%25E8%25A7%25A3%25E5%258E%258B%25E7%25BC%25A9%25E5%258E%258B%25E7%25BC%25A9%25E6%2596%2587%25E4%25BB%25B6%2F" title="Facebook"></a><a class="social-share-ico icon-telegram" target="_blank" rel="noopener" href="https://t.me/share/url?url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F26%2F%25E4%25BD%25BF%25E7%2594%25A8WinRAR%25E8%25A7%25A3%25E5%258E%258B%25E7%25BC%25A9%25E5%258E%258B%25E7%25BC%25A9%25E6%2596%2587%25E4%25BB%25B6%2F&amp;text=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6" title="Telegram"></a><a class="social-share-ico icon-whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6 https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F26%2F%25E4%25BD%25BF%25E7%2594%25A8WinRAR%25E8%25A7%25A3%25E5%258E%258B%25E7%25BC%25A9%25E5%258E%258B%25E7%25BC%25A9%25E6%2596%2587%25E4%25BB%25B6%2F" title="WhatsApp"></a><a class="social-share-ico icon-linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fallen1566.github.io%2F2024%2F05%2F26%2F%25E4%25BD%25BF%25E7%2594%25A8WinRAR%25E8%25A7%25A3%25E5%258E%258B%25E7%25BC%25A9%25E5%258E%258B%25E7%25BC%25A9%25E6%2596%2587%25E4%25BB%25B6%2F&amp;title=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6&amp;summary=undefined&amp;source=%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6" title="LinkedIn"></a></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/05/25/%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E6%94%BB%E7%95%A5/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">国赛答辩攻略</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="/img/avatar.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://telegraph-image-7ay.pages.dev/file/c9f6f91b2953ac77a5838.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">在这个<b>世界</b>上，也有即使你<b>不懂索取</b>，</br>也会无条件向你献上爱情的——<b>多管闲事</b>的人。</div><div class="author-info__description2">仅仅是能与这样的人相遇，我们也算是很<b>幸福</b>的人了。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">Allen1566</div><div class="author-info__desc">Nothing...</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/allen1566" title="Github"><i class="solitude  st-github-line"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0"><span class="toc-text">0.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E8%AE%A4%E8%AF%86%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%EF%BC%88%E6%8A%84%E7%9A%84%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%EF%BC%89"><span class="toc-text">1.认识压缩文件（抄的百度百科）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E9%99%84%E5%8A%A0%E5%86%85%E5%AE%B9%EF%BC%89%E5%8E%8B%E7%BC%A9%E5%8E%9F%E7%90%86"><span class="toc-text">（附加内容）压缩原理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E8%A7%A3%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6"><span class="toc-text">2.安装解压缩软件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AE%BF%E9%97%AE%E5%AE%98%E7%BD%91"><span class="toc-text">1.访问官网</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E9%99%84%E5%8A%A0%E5%86%85%E5%AE%B9%EF%BC%8932%E4%BD%8D%EF%BC%9F64%E4%BD%8D%EF%BC%9F"><span class="toc-text">（附加内容）32位？64位？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%BF%AB%E9%80%9F%E6%9F%A5%E7%9C%8B%E4%BD%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%A7%84%E6%A0%BC"><span class="toc-text">1.快速查看你的操作系统规格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BB%96%E4%BB%AC%E6%98%AF%E5%95%A5%EF%BC%9F"><span class="toc-text">2.他们是啥？</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E8%BF%9B%E8%A1%8C%E5%8E%8B%E7%BC%A9"><span class="toc-text">3.进行压缩</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="toc-text">4.解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">第一种方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">第二种方法</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/26/%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/" title="使用WinRAR解压缩压缩文件"><img alt="使用WinRAR解压缩压缩文件" src="https://imgapi.xl0408.top/index.php"></a><div class="content"><a class="title" href="/2024/05/26/%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/" title="使用WinRAR解压缩压缩文件">使用WinRAR解压缩压缩文件</a><a class="article-recent_post_categories" href="/2024/05/26/%E4%BD%BF%E7%94%A8WinRAR%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/">小白专属</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/25/%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E6%94%BB%E7%95%A5/" title="国赛答辩攻略"><img alt="国赛答辩攻略" src="https://telegraph-image-7ay.pages.dev/file/191854e725e6be7c2e926.jpg"></a><div class="content"><a class="title" href="/2024/05/25/%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E6%94%BB%E7%95%A5/" title="国赛答辩攻略">国赛答辩攻略</a><a class="article-recent_post_categories" href="/2024/05/25/%E5%9B%BD%E8%B5%9B%E7%AD%94%E8%BE%A9%E6%94%BB%E7%95%A5/">编程</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/19/%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5/" title="一步两步，一步两步~"><img alt="一步两步，一步两步~" src="https://imgapi.xl0408.top/index.php"></a><div class="content"><a class="title" href="/2024/05/19/%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5/" title="一步两步，一步两步~">一步两步，一步两步~</a><a class="article-recent_post_categories" href="/2024/05/19/%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5%EF%BC%8C%E4%B8%80%E6%AD%A5%E4%B8%A4%E6%AD%A5/">班级梗百科</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/19/%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2/" title="关于Hexo文章的随机封面"><img alt="关于Hexo文章的随机封面" src="https://telegraph-image-7ay.pages.dev/file/6973a0af4d2bd6b921df4.png"></a><div class="content"><a class="title" href="/2024/05/19/%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2/" title="关于Hexo文章的随机封面">关于Hexo文章的随机封面</a><a class="article-recent_post_categories" href="/2024/05/19/%E5%85%B3%E4%BA%8EHexo%E6%96%87%E7%AB%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%B0%81%E9%9D%A2/">Hexo</a></div></div></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Allen1566's Blog</span></div><div class="footer-bar-description">来自 Allen1566 的文章</div><a class="footer-bar-link" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328">了解更多</a></div><div id="footer_deal"><a class="deal_link" href="mailto:allen.1566@yandex.ru" title="Mail"><i class="solitude  st-mail-line"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="归档">归档</a><a class="footer-item" href="/categories/" title="分类">分类</a><a class="footer-item" href="/tags/" title="标签">标签</a></div></div><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://www.imgtp.com/" title="免费图床">免费图床</a><a class="footer-item" target="_blank" rel="noopener" href="https://v6.51.la/" title="51la统计">51la统计</a><a class="footer-item" target="_blank" rel="noopener" href="https://tongji.baidu.com/" title="百度统计">百度统计</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 By&nbsp;<a class="footer-bar-link" href="/">Allen1566</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" alt="B站">B站</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://space.bilibili.com/1821020328" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.11.0"></script><script src="/js/main.js?v=1.11.0"></script><script src="/js/third_party/waterfall.min.js?v=1.11.0"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="/js/third_party/universe.min.js?v=1.11.0"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"></div></div><!-- newest comment--><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    is_rm && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- google adsense--><!-- search--><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2024/05/26/使用WinRAR解压缩压缩文件/","2024/05/25/国赛答辩攻略/","2024/05/19/一步两步，一步两步/","2024/05/19/关于Hexo文章的随机封面/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>
